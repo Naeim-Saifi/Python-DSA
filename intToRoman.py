@@ -1,0 +1,25 @@
+n=3749
+s=""
+while(n!=0):
+    if(n>=1000):
+        n=n-1000
+        s+="M"
+    elif(n>=500 and n<1000):
+        n=n-500
+        s+="D"
+    elif(n>=100 and n<500):
+        n=n-100
+        s+="C"
+    elif(n>=50 and n<100):
+        n=n-50
+        s+="L"
+    elif(n>=10 and n<50):
+        n=n-10
+        s+="X"
+    elif(n>=5 and n<10):
+        n=n-5
+        s+="V"
+    elif(n>=1 and n<5):
+        n=n-1
+        s+="I"
+print(s)
