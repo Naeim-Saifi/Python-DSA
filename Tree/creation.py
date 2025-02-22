@@ -17,12 +17,14 @@ class Node:
                 self.right = Node(data)
             else:
                 self.right.insert(data)
-    def inorder(self):
-        if self.left:
-            self.left.inorder()
-        print(self.data, end=" ")
-        if self.right:
-            self.right.inorder()
+
+
+                
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.data, end=" ")
+        inorder(root.right)
 
 
 root = Node(10)
@@ -34,4 +36,4 @@ root.insert(12)
 root.insert(18)
 
 print("Inorder Traversal (Sorted Order):")
-root.inorder()
+inorder(root)
